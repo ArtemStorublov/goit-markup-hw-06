@@ -28,6 +28,8 @@ a {
 
 img {
   display: block;
+  width: 100%;
+    height: auto;
 }
 
 button:hover,
@@ -59,9 +61,10 @@ address {
 }
 /*? задання max-ширини контенту сайту та відцентрування його */
 .container {
-  max-width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* max-width: 1158px; */
+    width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
   margin: 0 auto;
 }
 /*?  */
@@ -206,44 +209,36 @@ address {
 /** ================================== */
 /** ==============FEATURES================ */
 .features {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .features-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+    gap: 72px;
 }
 
 .features-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
-}
-/* ----------mod4---------- */
-.features-icon-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 112px;
-  background: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  margin-bottom: 8px;
+    width: 100%;
 }
 
-.features-icon {
-  fill: transparent;
+.features-icon-container {
+  display: none;
 }
-/* ----------------------- */
+
 .features-item-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 36px;
+    line-height: 1.1;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+text-align: center;
+color: #2e2f42;
   margin-bottom: 8px;
 }
 
 .features-item-text {
+  font-weight: 500;
+    color: #434455;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -253,8 +248,8 @@ address {
 /** ==============TEAM================ */
 .team {
   background-color: #f4f4fd;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .team-title {
@@ -269,7 +264,12 @@ address {
 
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+    gap: 72px;
+  }
+  
+  .team-list-avatar {
+    width: 100%;
 }
 .team-list-container {
   padding: 32px 0px;
@@ -280,7 +280,7 @@ address {
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-  flex-basis: calc((100% - 3 * 24px) / 4);
+    width: 100%;
 }
 
 .team-list-name {
@@ -296,6 +296,7 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: #434455;
   text-align: center;
   margin-bottom: 8px;
 }
@@ -336,8 +337,8 @@ address {
 /** ================================== */
 /** ==============PORTFOLIO================ */
 .portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+    padding-top: 96px;
+      padding-bottom: 96px;
 }
 
 .portfolio-title {
@@ -352,16 +353,19 @@ address {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
+  gap: 48px;
 }
 
 .portfolio-list-item {
-  flex-basis: calc((100% - 2 * 24px) / 3);
+    width: 100%;
   cursor: pointer;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-list-item-image {
+  width: auto;
+  height: 280px;
 }
 
 .portfolio-list-item-caption {
@@ -372,21 +376,26 @@ address {
   color: #2e2f42;
   margin-bottom: 8px;
 }
+
 .portfolio-list-item-desc {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: #434455;
 }
+
 .portfolio-item-container {
   padding: 32px 16px;
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
 }
-.portfolio-list-item:hover {
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 .portfolio-cover-wrap {
   position: relative;
   overflow: hidden;
@@ -408,7 +417,8 @@ address {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list-item:hover .portfolio-cover-text {
+.portfolio-list-item:hover .portfolio-cover-text,
+.portfolio-list-item:focus .portfolio-cover-text {
   transform: translateY(0);
 }
 
@@ -766,4 +776,162 @@ address {
   border: none;
   margin: 0 auto;
   cursor: pointer;
+}
+/** @@@@@@@@@@@@@-MEDIA-queries-@@@@@@@@@@@@@ */
+
+/*? !!! Tablet !!! */
+
+@media (min-width: 768px) {
+
+  .container {
+    width: 768px;
+  }
+
+  /** ==============HEADER================ */
+
+
+  /** ==============HERO================ */
+
+
+  /** ==============FEATURES================ */
+
+  .features-list {
+    gap: 72px 24px;
+  }
+
+  .features-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .features-item-title {
+    text-align: left;
+  }
+
+  /** ==============TEAM================ */
+
+  .container-narrow {
+    width: 584px;
+  }
+
+  .team {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  .team-list {
+    gap: 64px 24px;
+  }
+
+  .team-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+
+  /** ==============PORTFOLIO================ */
+  .portfolio-list {
+    gap: 72px 24px;
+  }
+
+  .portfolio-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .portfolio-list-item-image {
+    width: 100%;
+  }
+
+  /** ==============FOOTER================ */
+
+
+
+}
+
+
+
+/*? !!! Desktop !!! */
+
+@media (min-width: 1158px) {
+
+  .container {
+    width: 1160px;
+  }
+
+  /** ==============HEADER================ */
+
+
+
+  /** ==============HERO================ */
+
+
+  /** ==============FEATURES================ */
+
+  .features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .features-list {
+    gap: 24px;
+  }
+
+  .features-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
+
+  .features-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+
+  .features-item-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .features-item-text {
+    font-weight: 400;
+  }
+
+
+  /** ==============TEAM================ */
+
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-list-item {
+    flex-basis: calc((100% - 3 * 24px) / 4);
+  }
+
+
+  /** ==============PORTFOLIO================ */
+  .portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+
+  .portfolio-list-item {
+    flex-basis: calc((100% - 2 * 24px) / 3);
+  }
+
+  /** ==============FOOTER================ */
+
+
 }
