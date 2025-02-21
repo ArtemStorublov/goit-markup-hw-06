@@ -592,21 +592,22 @@ address {
   visibility: hidden;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* display: flex;
+  /*? display: flex;
   align-items: center;
   justify-content: center; */
 }
 
-.backdrop.is-open {
+.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
 .modal-window {
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px 24px;
+  width: 288px;
+  min-height: 623px;
+  padding: 72px 16px 24px;
+  /*? overflow-y: scroll; */
   background-color: #fcfcfc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -746,9 +747,11 @@ address {
 
 .check-text {
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.6;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .privacy-checkbox-icon {
@@ -767,10 +770,11 @@ address {
 }
 
 .check-link {
-  line-height: 1.33333;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
+  display: block;
+  margin-left: 24px;
 }
 
 .modal-send-btn {
@@ -1008,6 +1012,23 @@ address {
 
   .footer-email-input {
     width: 264px;
+  }
+  /** ===========MODAL WINDOW============= */
+
+  .modal-window {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px 24px;
+  }
+
+  .check-text {
+    line-height: 1.17;
+  }
+
+  .check-link {
+    line-height: 1.33;
+    display: inline;
+    margin-left: 4px;
   }
 }
 
