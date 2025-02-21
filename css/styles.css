@@ -427,8 +427,8 @@ address {
 /** ==============FOOTER================ */
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .footer-logo {
@@ -440,7 +440,6 @@ address {
   text-transform: uppercase;
   color: #4d5ae5;
   display: inline-block;
-  max-width: 264px;
   margin-bottom: 16px;
 }
 
@@ -453,22 +452,17 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 264px;
-  margin-right: auto;
-}
-
-/* ----------mod4---------- */
-.footer-logo-container {
-  margin-right: 120px;
+  /* max-width: 264px; */
+  text-align: start;
 }
 
 .footer-container {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
 }
 
 .footer-social-container {
-  margin-right: 80px;
+  text-align: center;
+  margin-top: 72px;
 }
 
 .footer-social-caption {
@@ -483,6 +477,8 @@ address {
 .footer-social-list {
   display: flex;
   gap: 16px;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-social-item {
@@ -514,9 +510,14 @@ address {
 }
 
 /* ----------------------- */
+.footer-form-wrap {
+  margin-top: 72px;
+}
+
 .footer-form {
   display: flex;
-  gap: 24px;
+  gap: 16px;
+  flex-direction: column;
 }
 
 .footer-form-caption {
@@ -542,7 +543,7 @@ address {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  width: 100%;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
@@ -568,6 +569,8 @@ address {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-subcribe-icon {
@@ -792,6 +795,15 @@ address {
 
 /** @@@@@@@@@@@@@-MEDIA-queries-@@@@@@@@@@@@@ */
 
+@media screen and (min-width: 428px) {
+  .hero .container {
+    width: 428px;
+  }
+  .footer-container {
+    width: 428px;
+  }
+}
+
 /*? !!! Tablet !!! */
 
 @media (min-width: 768px) {
@@ -969,11 +981,33 @@ address {
   }
 
   /** ==============FOOTER================ */
-}
+  .container-narrow {
+    width: 584px;
+  }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+  }
 
-@media screen and (min-width: 428px) {
-  .hero .container {
-    width: 428px;
+  .footer-social-container {
+    text-align: start;
+    margin-top: 0;
+    margin-left: 24px;
+  }
+
+  .footer-company-slogan {
+    max-width: 264px;
+    margin-right: auto;
+  }
+
+  .footer-form {
+    gap: 24px;
+    flex-direction: row;
+  }
+
+  .footer-email-input {
+    width: 264px;
   }
 }
 
@@ -1116,4 +1150,29 @@ address {
   }
 
   /** ==============FOOTER================ */
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-container {
+    flex-wrap: nowrap;
+    align-items: baseline;
+  }
+  /* ----------mod4---------- */
+  .footer-logo-container {
+    margin-right: 120px;
+  }
+
+  .footer-social-container {
+    margin-left: 0;
+    margin-right: 80px;
+  }
+
+  .footer-form {
+    gap: 24px;
+  }
+  .footer-form-wrap {
+    margin-top: 0;
+  }
 }
