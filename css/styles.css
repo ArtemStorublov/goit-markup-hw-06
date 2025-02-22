@@ -31,7 +31,7 @@ a {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -136,6 +136,125 @@ address {
 
 .header-contacts-list {
   display: none;
+}
+/** ================================== */
+
+/** ==============Mob MODAL MENU================ */
+.mob-menu-window {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100%;
+  /* height: 100vh; */
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.menu-wrapper {
+  max-width: 320px;
+  height: 100%;
+  padding: 24px 24px 40px 16px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mob-menu-close-btn {
+  display: flex;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-btn:focus,
+.modal-close-btn:active {
+  border: none;
+}
+
+.mob-menu-close-btn:focus .mob-menu-icon-close,
+.mob-menu-close-btn:active .mob-menu-icon-close {
+  fill: #fff;
+}
+
+.mob-menu-icon-close {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+.mob-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* .current-mob {
+  color: #404bbf;
+} */
+.mob-menu-link:focus,
+.mob-menu-link:active {
+  color: #404bbf;
+}
+
+.mob-menu-contacts-item:first-child {
+  margin-bottom: 24px;
+}
+.mob-menu-contacts-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-contacts-link:focus,
+.mob-menu-contacts-link:active {
+  color: #404bbf;
+}
+
+.mob-menu-social-list {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+}
+.mob-menu-social-item {
+  width: 40px;
+  height: 40px;
+}
+.mob-menu-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu-social-link:hover,
+.mob-menu-social-link:focus,
+.mob-menu-social-link:active {
+  background-color: #31d0aa;
+}
+.mob-menu-social-icon {
+  fill: #f4f4fd;
 }
 
 /** ================================== */
@@ -361,11 +480,6 @@ address {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-list-item-image {
-  width: auto;
-  height: 280px;
 }
 
 .portfolio-list-item-caption {
@@ -826,7 +940,6 @@ address {
   .header-container {
     display: flex;
     align-items: center;
-    /* min-height: 72px; */
   }
 
   .header-navigation {
@@ -899,13 +1012,14 @@ address {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    /* font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em; */
     color: #434455;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  /** */
+  .mob-menu-window {
+    display: none;
   }
 
   /** ==============HERO================ */
@@ -972,6 +1086,7 @@ address {
   }
 
   /** ==============PORTFOLIO================ */
+
   .portfolio-list {
     gap: 72px 24px;
   }
@@ -980,14 +1095,12 @@ address {
     flex-basis: calc((100% - 24px) / 2);
   }
 
-  .portfolio-list-item-image {
-    width: 100%;
-  }
-
   /** ==============FOOTER================ */
+
   .container-narrow {
     width: 584px;
   }
+
   .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -1040,13 +1153,10 @@ address {
   }
 
   /** ==============HEADER================ */
+
   .header {
     padding-top: 24px;
     padding-bottom: 24px;
-  }
-
-  .header-container {
-    /* height: none; */
   }
 
   .header-navigation {
@@ -1079,6 +1189,7 @@ address {
   }
 
   /** ==============HERO================ */
+
   .hero {
     padding: 188px 0px;
     max-width: 1440px;
@@ -1171,6 +1282,7 @@ address {
   }
 
   /** ==============FOOTER================ */
+
   .footer {
     padding-top: 100px;
     padding-bottom: 100px;
